@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+/*通配符选择器，定义全局*/
+*{
+	padding: 5px;
+	margin: 2px;
+
+}
+
+main{
+    width: 100%;					/*宽度*/
+    height: 75vh;					/*高度，vh为自适应布局*/
+
+ 	display: flex;					/*弹性布局*/
+
+ 	/******实现换行******/
+ 	flex-flow: row wrap;			/*弹性盒的元素顺序显示*/
+    align-content: flex-start;		/*对其弹性盒各元素位于容器的开头*/
+    /******************/
+
+    justify-content: center;		/*居中排列*/
+    align-items: center;			/*纵轴居中对齐*/
+
+}
+
+body{
+	background-image: url(../img/background.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+
+
+a:link {color:#f9f8f8;}      		/* 未访问链接*/
+a:visited {color:#cbc2c2;}  		/* 已访问链接 */
+a:hover {color:#9e9e9e;}  			/* 鼠标移动到链接上 */
+a:active {color:#f5f5f5;}  			/* 鼠标点击时 */
+
+.titleh1{
+	color: white; 
+}
+
+.box{
+	float: left;					/*靠左浮动*/
+	margin: 35px;					/*外边距*/
+
+	flex: 0 0 18%;					/*flex-grow:0;flex-shrink:0;flex-basis:15;*/
+	height: 25px;
+
+}
+
+.targetimg{
+	float: left;
+	margin: 1px;
+	border: 1px solid #f9f8f8;		/*图片边框*/
+    border-radius: 100%;			/*添加圆角边框*/
+}
+
+.targetimg:hover{
+	transform: scale(1.2);			/*缩放为1.2倍*/
+}
+
+.targetdescribe{
+	float: left;
+}
+
+.inputframe{
+	width: 400px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;			/*边框和内边距的值是包含在width内*/
+    outline: none;					/*绘制于元素周围的一条线，突出元素*/
+    text-indent: 10px;				/*文本块中首行文本的缩进10px*/
+}
+
+.searchbutton{
+	width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    background: #00b3f7;
+    vertical-align: middle;			/*设置元素纵轴垂直对齐*/
+    outline-color: black;			/*边框颜色*/
+    color: white;					/*元素颜色*/
+    font-size: 20px;				/*字体大小*/
+
+}
+
+.footer0{
+	color: white;
+
+ 	display: flex;					/*弹性布局*/
+    justify-content: center;		/*居中排列*/
+    align-items: center;			/*纵轴居中对齐*/
+
+}
+
+
+@media screen and (max-width: 1100px) {
+
+    .titleh1{
+	    font-size: 70px;
+    }
+
+    .targetimg .targetdescribe{
+        margin-left: 0; 				/*左外边距设为0*/
+        width: auto; 					/*宽度填满（重置百分比%）*/
+        height: auto;
+    }
+
+	.box{
+		/*float: left;*/					/*靠左浮动*/
+		margin: 55px 58px;					/*外边距*/
+		transform: scale(2.4);
+		
+        
+		flex: 0 0 20%;					/*flex-grow:0;flex-shrink:0;flex-basis:15;*/
+		height: 75px;
+
+	}
+	
+	.inputframe{
+	    width: 600px;
+        height: 70px;
+        font-size: 35px;
+	}
+	
+	.searchbutton{
+	    width: 150px;
+        height: 70px;
+        border-radius: 5px;
+        font-size: 40px;				/*字体大小*/
+
+    }
+    
+    .footer0{
+        font-size: 35px;
+    }
+    
+    main{
+        margin: 80px;
+    }
+
+	body{
+	    width: 100%;
+	    background-image: url(../img/background.png);
+	    background-size: 100%;
+		background-position: center;
+        background-size: cover;
+		background-attachment: fixed;
+	}
+	
+}
